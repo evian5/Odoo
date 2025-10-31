@@ -59,4 +59,4 @@ Estos parametros deberemos copiarlos para introducirlos en el siguiente paso com
 A continuacion, debemos entrar en nuestro web service y en la barra lateral seleccionaremos 'Environment' y ahi, introduciremos la clave y el valor de los datos.
 
   - La clave de estos datos, debemos copiarla de nuestro Dockerfile donde encontraremos valores como '$PGHOST' por ejemplo, este sera la clave de la variable del host, esto se aplica para el resto de parametros, cada uno con su clave.
-
+8. Cuando va mal  tienes que hacer la limpieza de cache
