@@ -60,4 +60,3 @@ A continuacion, debemos entrar en nuestro web service y en la barra lateral sele
 
   - La clave de estos datos, debemos copiarla de nuestro Dockerfile donde encontraremos valores como '$PGHOST' por ejemplo, este sera la clave de la variable del host, esto se aplica para el resto de parametros, cada uno con su clave.
 
-El valor, lo debemos haber copiado en el paso anterior, asi que simplemente lo pegamos cada uno con su clave y ya estaría configurado
