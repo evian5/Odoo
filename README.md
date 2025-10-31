@@ -10,19 +10,14 @@ Dockerfile
 2. Rellenar fichero Dockerfile
 En el interior de nuestro fichero Dockerfile, introduciremos lo siguiente:
 
-# Imagen base Odoo 17
+- Imagen base Odoo 17
 FROM odoo:17
-# (Opcional) módulos propios
+- (Opcional) módulos propios
 COPY ./extra-addons /mnt/extra-addons
-# Puerto HTTP de Odoo
+- Puerto HTTP de Odoo
 EXPOSE 8069
-# Puerto por defecto de PostgreSQL
+- Puerto por defecto de PostgreSQL
 ENV PGPORT=5432
-# 1) Inicializa la BD indicada en $PGDATABASE si está vacía (stop-after-init)
-# 2) Después arranca el servidor normalmente
-#
-# NOTA: usamos $PGDATABASE para que la inicialización vaya contra esa BD
-# y --db-filter la fije para evitar que Odoo “coja” otra por error.
 CMD ["bash","-lc", "\
 echo '==> Checking/initializing DB $PGDATABASE' && \
 odoo -d $PGDATABASE -i base --without-demo=all \
